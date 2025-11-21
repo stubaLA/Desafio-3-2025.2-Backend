@@ -1,14 +1,9 @@
-//função de mudar imagem pelo id e pela url
 function changeImage(id, url) {
   document.getElementById(id).src = url;
 }
-//função de mudar texto pelo id e pelo texto
 function changeText(id, text) {
   document.getElementById(id).innerText = text;
 }
-
-// Daqui para baixo voce ira escrever
-// o código para resolver o desafio
 
 let pokemons = [];
 let pokemonAtual = 0;

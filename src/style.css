@@ -1,6 +1,6 @@
   body {
   font-family: "Roboto", sans-serif;
-  background: #f5f5f5;
+  background: #cfb624;
   margin: 0;
   padding: 0;
 }
@@ -34,7 +34,7 @@
   display: block;
   border: 2px solid #d32f2f;
   border-radius: 8px;
-  background: #fafafa;
+  background: #cfb624;
 }
 
 button#previous,
