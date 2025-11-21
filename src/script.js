@@ -1,21 +1,21 @@
-function changeImage(id, url) {
+function changeImage(id, url){
   document.getElementById(id).src = url;
 }
-function changeText(id, text) {
+function changeText(id, text){
   document.getElementById(id).innerText = text;
 }
 
 let pokemons = [];
 let pokemonAtual = 0;
 
-async function fetchTodosPokemons() {
+async function fetchTodosPokemons(){
   const response = await fetch('https://pokeapi.co/api/v2/pokemon/?offset=0&limit=1292');
   const data = await response.json();
   pokemons = data.results;
   mostrarPokemon(pokemonAtual);
 }
 
-async function mostrarPokemon(index) {
+async function mostrarPokemon(index){
   const pokemon = pokemons[index];
   if (!pokemon) return;
   const response = await fetch(pokemon.url);
@@ -24,12 +24,12 @@ async function mostrarPokemon(index) {
   changeText('name', data.name);
 }
 
-function anteriorPokemon() {
+function anteriorPokemon(){
   pokemonAtual = (pokemonAtual - 1 + pokemons.length) % pokemons.length;
   mostrarPokemon(pokemonAtual);
 }
 
-function proximoPokemon() {
+function proximoPokemon(){
   pokemonAtual = (pokemonAtual + 1) % pokemons.length;
   mostrarPokemon(pokemonAtual);
 }
